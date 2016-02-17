@@ -1,0 +1,162 @@
+// Popover
+//
+// The Popover component is a port from Twitter Bootstrap and allows us to display a modeless window on a click event.
+//
+// Full documentation can be found: http://getbootstrap.com/javascript/#popovers
+//
+// To use a popover add the class <code>js-popover</code> to an inline element. Block level elements will not work properly as the script won't always be able to accurately align the popover.
+//
+// The data attribute <code>data-placement</code> can be used to place the popover to the top, left, right, or bottom of the element.
+//
+// The content for the popover resides inside of a <code>&lt;div></code> with the class <code>Popover-content</code>. This <code>div</code> must come directly after the element containing the popover call. A heading element can be styled using the <code>Popover-heading</code> class.
+//
+// To initialize use this script at the end of the <code>&lt;body></code> tag:
+// <pre>if ($('.js-popover').length) {
+//   $('.js-popover').popover({
+//     container: 'body',
+//     html: true,
+//     content: function () {
+//       return $(this).next('.Popover-content').html();
+//     }
+//   });
+// }</pre>
+//
+// Markup: <button class="Button js-popover" data-placement="left">Popover Left</button>
+// <div class="Popover-content u-visuallyHidden">
+//   <h2 class="Popover-heading">Header</h2>
+//   <p>Popover content on left</p>
+// </div>
+// <button class="Button js-popover" data-placement="top">Popover Top</button>
+// <div class="Popover-content u-visuallyHidden">
+//   <h2 class="Popover-heading">Header</h2>
+//   <p>Popover content on top</p>
+// </div>
+// <button class="Button js-popover" data-placement="bottom">Popover Bottom</button>
+// <div class="Popover-content u-visuallyHidden">
+//   <h2 class="Popover-heading">Header</h2>
+//   <p>Popover content on bottom</p>
+// </div>
+// <button class="Button js-popover" data-placement="right">Popover Right</button>
+// <div class="Popover-content u-visuallyHidden">
+//   <h2 class="Popover-heading">Header</h2>
+//   <p>Popover content on right</p>
+// </div>
+//
+// Styleguide 17.0.0
+
+.Popover {
+	position: absolute;
+	z-index: 1000;
+	border-radius: rem($brand-round);
+	box-shadow: rem(3) rem(3) 0 rgba(57,72,86,.2);
+
+	&:before {
+		content: " ";
+		position: absolute;
+		width: rem(10);
+		height: rem(10);
+		background-color: $bgcolorPrimary6;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+}
+	.Popover-inner {
+		position: relative;
+		z-index: 100;
+		padding: rem($half-spacing-unit);
+		border-radius: rem($brand-round);
+		background-color: $bgcolorPrimary6;
+		@include font-size($centi-size);
+		color: $bgcolorPrimary1;
+	}
+	.Popover-heading {
+		margin-bottom: 0;
+		@include font-size($centi-size);
+		color: $bgcolorSecondary4;
+		font-weight: 600;
+	}
+
+.Popover--light {
+	border: rem(1) solid $brdrColorDark;
+
+	.Popover-inner {
+		background-color: $bgcolorPrimary1;
+		color: $color5;
+	}
+
+	&:before {
+		background-color: $bgcolorPrimary1;
+		border: rem(1) solid $brdrColorDark;
+	}
+}
+
+.Popover--top {
+	margin-top: rem(-12);
+
+	&:before {
+		left: 50%;
+		bottom: rem(-5);
+		margin-left: rem(-5);
+	}
+}
+
+.Popover--right {
+	margin-left: 12px;
+
+	&:before {
+		top: 50%;
+		left: rem(-5);
+		margin-top: rem(-5);
+	}
+}
+
+.Popover--bottom {
+	margin-top: 12px;
+
+	&:before {
+		left: 50%;
+		top: rem(-5);
+		margin-left: rem(-5);
+	}
+}
+
+.Popover--left {
+	margin-left: -12px;
+
+	&:before {
+		top: 50%;
+		right: rem(-5);
+		margin-top: rem(-5);
+	}
+}
+
+// Popover - Light
+//
+// This modifier changes the appearance of the popover to a light background and border with dark text.
+//
+// To use this modifier add the following data-attribute to the element: <code>data-modifier="Popover--light"</code>.
+//
+// Markup: <button class="Button js-popover" data-placement="left" data-modifier="Popover--light">Popover Left</button>
+// <div class="Popover-content u-visuallyHidden">
+//   <h2 class="Popover-heading">Header</h2>
+//   <p>Popover content on left</p>
+// </div>
+// <button class="Button js-popover" data-placement="top" data-modifier="Popover--light">Popover Top</button>
+// <div class="Popover-content u-visuallyHidden">
+//   <h2 class="Popover-heading">Header</h2>
+//   <p>Popover content on top</p>
+// </div>
+// <button class="Button js-popover" data-placement="bottom" data-modifier="Popover--light">Popover Bottom</button>
+// <div class="Popover-content u-visuallyHidden">
+//   <h2 class="Popover-heading">Header</h2>
+//   <p>Popover content on bottom</p>
+// </div>
+// <button class="Button js-popover" data-placement="right" data-modifier="Popover--light">Popover Right</button>
+// <div class="Popover-content u-visuallyHidden">
+//   <h2 class="Popover-heading">Header</h2>
+//   <p>Popover content on right</p>
+// </div>
+//
+// Styleguide 17.1

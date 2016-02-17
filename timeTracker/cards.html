@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Work Week Time Tracker</title>
+    <link rel="stylesheet" href="styles/css/timeTracker.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="timeCard empty">
+        <div class="calendar">
+            <p class="weekday">Monday</p>
+            <p class="date">12/14/2015</p>
+        </div>
+        <div class="divider"></div>
+        <p class="todaysStatus">What is today's status?</p>
+        <form class="timeCard-chooseStatus">
+            <label for="office">Office</label>
+            <input name="work-status" type="radio" class="timeCard-checkbox" id="office" />
+            <label for="wfh">WFH</label>
+            <input name="work-status" type="radio" class="timeCard-checkbox" id="wfh" />
+            <label for="sick">Sick</label>
+            <input name="work-status" type="radio" class="timeCard-checkbox" id="sick" />
+            <label for="vacation">Vaca</label>
+            <input name="work-status" type="radio" class="timeCard-checkbox" id="vacation" />
+        </form>
+    </div>
+
+    <div class="timeCard fill-in time-in">
+        <div class="calendar">
+            <p class="weekday">Monday</p>
+            <p class="date">12/14/2015</p>
+        </div>
+        <div class="divider"></div>
+        <div class="timeCard-workStatus house-image">
+            <img class="timeCard-image" src="images/house.png">
+        </div>
+        <form class="timeCard-chooseTimeIn">
+            <label for="input-timeIn">Arrival Time</label>
+            <input type="text" class="timeCard-timeIn" id="input-timeIn" />
+        </form>
+    </div>
+
+    <div class="timeCard time-in">
+        <div class="calendar">
+            <p class="weekday">Monday</p>
+            <p class="date">12/14/2015</p>
+        </div>
+        <div class="divider"></div>
+        <div class="timeCard-workStatus office-image">
+            <img class="timeCard-image" src="images/building-icon.svg">
+        </div>
+        <p class="arrival">arrive:&nbsp<span class="arrivalTime">8:10am</span></p>
+        <p class="total">total hrs worked:&nbsp;<span class="totalHours">2.15</span></p>
+        <a class="select-depart" href="">Depart</a>
+    </div>
+
+    <div class="timeCard  fill-in time-out">
+        <div class="calendar">
+            <p class="weekday">Monday</p>
+            <p class="date">12/14/2015</p>
+        </div>
+        <div class="divider"></div>
+        <div class="timeCard-workStatus sick-image">
+            <img class="timeCard-image" src="images/sick.png">
+        </div>
+        <form class="timeCard-chooseTimeOut">
+            <label for="input-timeOut">Departure Time</label>
+            <input type="text" class="timeCard-timeIn" id="input-timeOut" />
+        </form>
+    </div>
+
+    <div class="timeCard  check-if-done">
+        <div class="calendar">
+            <p class="weekday">Monday</p>
+            <p class="date">12/14/2015</p>
+        </div>
+        <div class="divider"></div>
+        <div class="timeCard-workStatus house-image">
+            <img class="timeCard-image" src="images/house.png">
+        </div>
+        <p class="todaysStatus">Is your workday done?</p>
+        <form class="timeCard-chooseStatus">
+            <label for="checkbox-yes">Yes</label>
+            <input type="checkbox" class="timeCard-checkbox" id="checkbox-yes" />
+            <label for="checkbox-no">No</label>
+            <input type="checkbox" class="timeCard-checkbox" id="checkbox-no" />
+        </form>
+    </div>
+
+    <div class="timeCard completed">
+        <div class="calendar">
+            <p class="weekday">Monday</p>
+            <p class="date">12/14/2015</p>
+        </div>
+        <div class="divider"></div>
+        <div class="timeCard-workStatus vacation-image">
+            <img class="timeCard-image" src="images/vacation.png">
+        </div>
+        <p class="arrival">arrive:&nbsp<span class="arrivalTime">8:10am</span></p>
+        <p class="depart">depart:&nbsp<span class="departureTime">12:45pm</span></p>
+        <p class="total">total hrs worked:&nbsp;<span class="totalHours">8.35</span></p>
+    </div>
+
+</body>
+</html>

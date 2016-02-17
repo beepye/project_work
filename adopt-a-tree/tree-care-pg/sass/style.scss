@@ -1,0 +1,31 @@
+@import '../../global-stylesheet/global';
+
+body {
+	background: $darktan;
+
+	#care-container {
+		width: 95%;
+		margin: 2.5%;
+
+		> .care-module {
+			box-sizing: border-box;
+			width: 50%;
+			background: #fff;
+			display: inline-block;
+			text-align: center;
+			border: 1px solid $darktan;
+
+			> span {
+				display: block;
+				color: $green;
+				font-size: 4em;
+				margin-top: 25px;
+			}
+
+			> p {
+				color: $brown;
+				margin: 10px 0 25px;
+			}
+		}
+	}
+}

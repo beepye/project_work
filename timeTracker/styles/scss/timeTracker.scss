@@ -1,0 +1,159 @@
+@import "normalize";
+@import "reset";
+
+$base-space: 24px;
+$half-space: $base-space/2;
+$quarter-space: $half-space/2;
+$radius: 3px;
+$circle-radius: 50%;
+$base-font-size: 16px;
+$small-font-size: 14px;
+$smallest-font-size: 11px;
+$font-color: rgba(47, 79, 79, 1);
+$light-grey: rgba(211, 211, 211, 1);
+$lime-green: rgba(50, 205, 50, 1);
+$red: rgba(220, 20, 60, 1);
+$blue: rgba(0, 123, 191, .6);
+$green: rgba(143, 188, 143, .9);
+$coral: rgba(240, 128, 128, .9);
+$orange: rgba(255, 140, 0, .7);
+$border: 1px solid $light-grey;
+$light: 300;
+$normal: 400;
+$bold: 500;
+
+body {
+  font: $light 16px/24px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: $base-space;
+  color: $font-color;
+}
+
+.calendar {
+  width: 100%;
+
+  .weekday {
+    font-weight: $normal;
+  }
+
+  .date {
+    font-size: $smallest-font-size;
+  }
+}
+
+.arrival, .depart, .total, .select-depart {
+  font-weight: $light;
+  font-size: $small-font-size;
+}
+
+.select-depart {
+  color: $lime-green;
+  text-decoration: none;
+  position: absolute;
+  bottom: $half-space;
+  right: $half-space;
+}
+
+.arrivalTime, .departureTime, .totalHours {
+  font-weight: $normal;
+  font-size: $base-font-size;
+}
+
+.totalHours {
+  color: $red;
+  font-weight: $bold;
+
+  .completed & {
+    color: $lime-green;
+  }
+}
+
+.divider {
+  border-top: $border;
+  margin: $half-space 0;
+}
+
+.timeCard-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.timeCard {
+  position: relative;
+  flex: none;
+  border: $border;
+  border-radius: $radius;
+  margin: 0 $base-space $base-space 0;
+  padding: $half-space;
+  min-height: 174px;
+  width: 300px;
+}
+
+.timeCard-workStatus {
+  position: absolute;
+  top: $half-space;
+  right: $half-space;
+  width: 50px;
+  height: 50px;
+  padding: $half-space;
+  border-radius: $circle-radius;
+
+  &.office-image {
+    background: $blue;
+  }
+
+  &.house-image {
+    background: $green;
+  }
+
+  &.sick-image {
+    background: $coral;
+  }
+
+  &.vacation-image {
+    background: $orange;
+  }
+
+  .timeCard-image {
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+
+.todaysStatus {
+  width: 100%;
+  margin-bottom: $half-space;
+  text-align: center;
+}
+
+.timeCard-chooseStatus {
+  width: 100%;
+  text-align: center;
+
+  label {
+    margin-left: $quarter-space;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
+.timeCard-chooseTimeIn, .timeCard-chooseTimeOut {
+  width: 100%;
+  text-align: center;
+    
+  label {
+    display: block;
+  }
+
+  input[type=text] {
+    border: $border;
+    box-shadow: none;
+    padding: $quarter-space;
+    outline: none;
+    width: 100px;
+    margin-top: $quarter-space;
+    text-align: center;
+  }
+}

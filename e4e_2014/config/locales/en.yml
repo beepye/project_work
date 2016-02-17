@@ -1,0 +1,61 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+# Data structure template
+#------------------------
+# bio3:
+#       name:
+#       bio_html: |
+
+#       avatar:
+#       title:
+#       company:
+#       twitter:
+#       linked_in:
+#       session_title:
+#       session_desc:
+
+en:
+  speakers:
+    bio1:
+      name: 'Merlin Mann'
+      bio_html: |
+        <p>Merlin is best known as the creator of 43folders.com, a popular website about finding the time and attention to do your best creative work. Born in Cincinnati, Ohio, and raised on Florida’s humid coast, Merlin was awarded a B.A. from New College of Florida. His writing has been featured in Wired, Make, Popular Science, and MacWorld. He is the creator of The Merlin Show and 5ives, and he co-hosts You Look Nice Today, Back to Work, and Roderick on the Line. More recently, Merlin has become a sought-after speaker and presenter, who has received rave reviews for delivering his energetic productivity talks at Apple, Google, Yahoo!, Adobe, and many other esteemed companies and organizations.</p>
+      avatar: '/assets/Merlin_Mann.jpg'
+      title: 'Writer'
+      company: '43folders.com'
+      twitter: 'https://twitter.com/hotdogsladies'
+      linked_in: ''
+      session_title:
+      session_desc:
+    bio2:
+      name: 'Michael Lopp'
+      bio_html: |
+        <p>Michael Lopp is a Silicon Valley-based engineering leader who builds both people and software at companies such as Borland, Netscape, and Apple. While he's not worrying about staying relevant, he writes about pens, bridges, people, poker, and werewolves at the popular weblog, Rands in Repose. He currently works as a Director at Palantir in downtown Palo Alto with the most important institutions on the world's hardest problems.</p>
+        <p>Michael has written two books. His first book "Managing Humans, 2nd Edition" is a popular guide to the art of engineering leadership and clearly explains that while you will be rewarded for what you build, you will only be successful because of your people. His second book "Being Geek" is a career handbook for geeks and nerds alike.</p>
+        <p>Michael surfs, plays hockey, and drinks red wine in the redwoods of Northern California whenever he can because staying sane is more important than staying busy.</p>
+      avatar: '/assets/Michael_Lopp.jpg'
+      title: 'Director'
+      company: 'Palantir'
+      twitter: 'https://twitter.com/rands'
+      linked_in: 'https://www.linkedin.com/pub/michael-lopp/0/1/642'
+      session_title:
+      session_desc:
+    bio3:
+      name: 'Abbey Fichtner'
+      bio_html: |
+        <p>Abby Fichtner (@HackerChick) is Hacker in Residence at Harvard Innovation Lab and creator of Hack Boston. Named an Innovation Amplifier by the Boston Globe and one of the Top 25 Women in Boston Tech – Abby launched Boston’s Big Data Hacker Space and was Microsoft’s Evangelist for Startups, where she got to help hundreds of early stage companies as they built out the next generation of technology.</p>
+        <p>A software developer by trade, Abby’s background is a mixture of developing bleeding-edge technology for startups and coaching teams on how to develop better software. Abby is extremely passionate about building communities where innovation thrives because she believes that each and every one of us is capable of changing the world. </p>
+
+      avatar: '/assets/Abby_Fichtner.png'
+      title: 'Hacker in Residence'
+      company: 'Harvard Innovation Lab'
+      twitter: 'https://twitter.com/HackerChick'
+      linked_in: 'http://www.linkedin.com/in/abbyfichtner'
+      session_title:
+      session_desc:
+
+
+
+
+

@@ -1,0 +1,384 @@
+// Tables
+//
+// The base CTCT Table style adds cell spacing and left aligns &lt;th> elements in the &lt;thead>. Add the class <em>Table</em> to activate these styles. 
+//
+// Markup: <table class="Table {$modifiers}">
+//   <thead>
+//     <tr>
+//       <th>Name</th>
+//       <th>Company</th>
+//       <th>Email</th>
+//       <th>Phone</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//        <td>Dan DeRose</td>
+//        <td>Constant Contact</td>
+//        <td>dderose@constantcontact.com</td>
+//        <td>555-555-5555</td>
+//     </tr>
+//     <tr>
+//        <td>Dan Dumont</td>
+//        <td>Constant Contact</td>
+//        <td>ddumont@constantcontact.com</td>
+//        <td>555-555-5555</td>
+//     </tr>
+//     <tr>
+//        <td>Bruce Kerans</td>
+//        <td>Constant Contact</td>
+//        <td>bkerans@constantcontact.com</td>
+//        <td>555-555-5555</td>
+//     </tr>
+//     <tr>
+//        <td>Brian Pye</td>
+//        <td>Constant Contact</td>
+//        <td>bpye@constantcontact.com</td>
+//        <td>555-555-5555</td>
+//     </tr>
+//   </tbody>
+// </table>
+// 
+// .Table--border - Add a border around the entire table
+// .Table--cellBorders - Add borders around all cells
+// .Table--bodyBorder - Add borders around cells in the &lt;tbody>
+// .Table--striped - Alternating colored rows
+// 
+// Styleguide 8.0
+
+.Table {
+	width: 100%;
+	border-collapse: separate;
+	border-radius: rem($brand-round);
+
+	th {
+		text-align: left;
+        font-weight: 600;
+	}
+
+	tr {
+    	> th,
+    	> td {
+    		padding: rem($base-spacing-unit * .75);
+    	}
+    }
+}
+    .Table--striped {
+        > tbody {
+            > tr:nth-child(even) {
+                background-color: #ebedee;
+            }
+        }
+    }
+
+    .Table--border {
+        border: rem(1) solid $color6;
+    }
+
+    .Table--cellBorders {
+        border-spacing: 1px;
+        background-color: $color6;
+
+        tr {
+            background-color: #fff;
+        }
+
+        th:first-child {
+            border-radius: rem(4) 0 0 0;
+        }
+
+        th:last-child {
+            border-radius: 0 rem(4) 0 0;
+        }
+
+        tbody {
+            > tr:last-child {
+                > td:first-child {
+                    border-radius: 0 0 0 rem(4);
+                }
+
+                > td:last-child {
+                    border-radius: 0 0 rem(4) 0;
+                }
+            }
+        }
+    }
+
+    .Table--bodyBorder {
+        > tbody {
+            > tr {
+                > td {
+                    border-top: rem(1) solid $color6;
+                    border-left: rem(1) solid $color6;
+
+                    &:last-child {
+                        border-right: rem(1) solid $color6;
+                    }
+                }
+
+                &:first-child {
+                    > td {
+
+                        &:first-child {
+                            border-radius: rem(4) 0 0 0;
+                        }
+
+                        &:last-child {
+                            border-radius: 0 rem(4) 0 0;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    > td {
+                        border-bottom: rem(1) solid $color6;
+
+                        &:first-child {
+                            border-radius: 0 0 0 rem(4);
+                        }
+
+                        &:last-child {
+                            border-radius: 0 0 rem(4) 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .Table-head {
+        background-color: #d7dadd;
+
+        > tr {
+            background-color: #d7dadd;
+        }
+
+        .is-sortable {
+            background-color: $bgcolorPrimary2;
+            color: $color2;
+            cursor: pointer;
+        }
+    }
+	.Table-heading {
+		display: block;
+		width: 100%;
+		padding-bottom: rem(10);
+		border-bottom: rem(1) solid $color1;
+		@include font-size($milli-size);
+		text-transform: uppercase;
+		font-weight: 600;
+		color: $color1;
+	}
+
+// thead Styles
+//
+// The table head (&lt;thead>) can be styled separately through the use of the <em>Table-head</em> class.
+//
+// Markup:
+// <table class="Table">
+//   <thead class="Table-head">
+//     <tr>
+//       <th>Name</th>
+//       <th>Company</th>
+//       <th>Email</th>
+//       <th>Phone</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//        <td>Dan DeRose</td>
+//        <td>Constant Contact</td>
+//        <td>dderose@constantcontact.com</td>
+//        <td>555-555-5555</td>
+//     </tr>
+//     <tr>
+//        <td>Dan Dumont</td>
+//        <td>Constant Contact</td>
+//        <td>ddumont@constantcontact.com</td>
+//        <td>555-555-5555</td>
+//     </tr>
+//     <tr>
+//        <td>Bruce Kerans</td>
+//        <td>Constant Contact</td>
+//        <td>bkerans@constantcontact.com</td>
+//        <td>555-555-5555</td>
+//     </tr>
+//     <tr>
+//        <td>Brian Pye</td>
+//        <td>Constant Contact</td>
+//        <td>bpye@constantcontact.com</td>
+//        <td>555-555-5555</td>
+//     </tr>
+//   </tbody>
+// </table>
+// 
+// Styleguide 8.1
+
+// Sortable Column
+//
+// A sortable column may be indicated with the use of the <code>.is-sortabled</code> class upon the desired <code>&lt;th></code> and the addition of the <code>.u-roundedCaret</code> icon.
+//
+// Markup:
+// <table class="Table">
+//   <thead class="Table-head">
+//     <tr>
+//       <th class="is-sortable">Name <i class="Icon--roundedCaret u-floatRight"></i></th>
+//       <th>Company</th>
+//       <th>Email</th>
+//       <th>Phone</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//        <td>Dan DeRose</td>
+//        <td>Constant Contact</td>
+//        <td>dderose@constantcontact.com</td>
+//        <td>555-555-5555</td>
+//     </tr>
+//     <tr>
+//        <td>Dan Dumont</td>
+//        <td>Constant Contact</td>
+//        <td>ddumont@constantcontact.com</td>
+//        <td>555-555-5555</td>
+//     </tr>
+//     <tr>
+//        <td>Bruce Kerans</td>
+//        <td>Constant Contact</td>
+//        <td>bkerans@constantcontact.com</td>
+//        <td>555-555-5555</td>
+//     </tr>
+//     <tr>
+//        <td>Brian Pye</td>
+//        <td>Constant Contact</td>
+//        <td>bpye@constantcontact.com</td>
+//        <td>555-555-5555</td>
+//     </tr>
+//   </tbody>
+// </table>
+// 
+// Styleguide 8.1.1
+
+
+// Table Heading
+//
+// The table heading should appear above a table. Apply the class <em>Table-heading</em> to a text element such as a heading tag.
+//
+// Markup: <h1 class="Table-heading">Table Heading</h1> 
+// 
+// Styleguide 8.2
+
+
+// Table Pagination and Actions
+//
+// Data Tables include both a pagination and an actions toolbar. The example code below uses a wrapper div with a class of <em>DataToolBar</em> and unordered lists with a class of <em>DataToolBar-Group</em> to achieve this.
+// 
+// Spacing and positioning has been achieved using utility classes.
+//
+// Markup: 
+// <div class="DataToolbar">
+//   <ul class="DataToolbar-group u-floatRight u-marginFlush">
+//     <li class="u-marginRight">View: <a href="#">Display Type</a></li>
+//     <li class="u-marginRight"><a href="#">Show 5</a></li>
+//     <li>
+//       <a href="#" class="Icon--caretLeft u-marginRightHalf"></a>
+//       Page 1 of 6
+//       <a href="#" class="Icon--caretRight u-marginLeftHalf"></a>
+//     </li>
+//   </ul>
+//   <ul class="DataToolbar-group u-marginFlush">
+//     <li class="u-marginRight">28 Items</li>
+//     <li class="u-marginRight"><a href="#" class="u-linkComplex"><span class="Icon--plus"></span> <span class="u-linkComplex-target">Action</span></a></li>
+//     <li><a href="#" class="u-linkComplex"><span class="Icon--edit"></span> <span class="u-linkComplex-target">Action</span></a></li>
+//   </ul>
+// </div>
+// 
+// Styleguide 8.3
+
+
+// Complete Table Example
+//
+// Below is a complete example of the commonly used data table in Toolkit.
+//
+// Markup: <h1 class="Table-heading">Table Heading</h1> 
+// <div class="DataToolbar">
+//   <ul class="DataToolbar-group u-floatRight u-marginFlush">
+//     <li class="u-marginRight">View: <a href="#">Display Type</a></li>
+//     <li class="u-marginRight"><a href="#">Show 5</a></li>
+//     <li>
+//       <a href="#" class="Icon--caretLeft u-marginRightHalf"></a>
+//       Page 1 of 6
+//       <a href="#" class="Icon--caretRight u-marginLeftHalf"></a>
+//     </li>
+//   </ul>
+//   <ul class="DataToolbar-group u-marginFlush">
+//     <li class="u-marginRight">28 Items</li>
+//     <li class="u-marginRight"><a href="#" class="u-linkComplex"><span class="Icon--plus"></span> <span class="u-linkComplex-target">Action</span></a></li>
+//     <li><a href="#" class="u-linkComplex"><span class="Icon--edit"></span> <span class="u-linkComplex-target">Action</span></a></li>
+//   </ul>
+// </div>
+// <table class="Table Table--striped Table--cellBorders">
+//   <thead class="Table-head">
+//     <tr>
+//       <th class="u-tableCellCollapse"><input type="checkbox" class="Form-checkbox" id="checkbox1" /><label for="checkbox1" class="u-paddingFlush"></label></th>
+//       <th class="is-sortable">Name <i class="Icon--roundedCaret u-floatRight"></i></th>
+//       <th>Company</th>
+//       <th>Email</th>
+//       <th>Phone</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//        <td><input type="checkbox" class="Form-checkbox" id="checkbox2" checked /><label for="checkbox2" class="u-paddingFlush"></label></td>
+//        <td>Dan DeRose</td>
+//        <td>Constant Contact</td>
+//        <td>dderose@constantcontact.com</td>
+//        <td>555-555-5555</td>
+//     </tr>
+//     <tr>
+//        <td><input type="checkbox" class="Form-checkbox" id="checkbox3" /><label for="checkbox3" class="u-paddingFlush"></label></td>
+//        <td>Dan Dumont</td>
+//        <td>Constant Contact</td>
+//        <td>ddumont@constantcontact.com</td>
+//        <td>555-555-5555</td>
+//     </tr>
+//     <tr>
+//        <td><input type="checkbox" class="Form-checkbox" id="checkbox4" /><label for="checkbox4" class="u-paddingFlush"></label></td>
+//        <td>Bruce Kerans</td>
+//        <td>Constant Contact</td>
+//        <td>bkerans@constantcontact.com</td>
+//        <td>555-555-5555</td>
+//     </tr>
+//     <tr>
+//        <td><input type="checkbox" class="Form-checkbox" id="checkbox5" /><label for="checkbox5" class="u-paddingFlush"></label></td>
+//        <td>Brian Pye</td>
+//        <td>Constant Contact</td>
+//        <td>bpye@constantcontact.com</td>
+//        <td>555-555-5555</td>
+//     </tr>
+//     <tr>
+//        <td><input type="checkbox" class="Form-checkbox" id="checkbox6" /><label for="checkbox6" class="u-paddingFlush"></label></td>
+//        <td>Katie Levin</td>
+//        <td>Constant Contact</td>
+//        <td>klevin@constantcontact.com</td>
+//        <td>555-555-5555</td>
+//     </tr>
+//   </tbody>
+// </table>
+// <div class="DataToolbar">
+//   <ul class="DataToolbar-group u-floatRight u-marginFlush">
+//     <li class="u-marginRight">View: <a href="#">Display Type</a></li>
+//     <li class="u-marginRight"><a href="#">Show 5</a></li>
+//     <li>
+//       <a href="#" class="Icon--caretLeft u-marginRightHalf"></a>
+//       Page 1 of 6
+//       <a href="#" class="Icon--caretRight u-marginLeftHalf"></a>
+//     </li>
+//   </ul>
+//   <ul class="DataToolbar-group u-marginFlush">
+//     <li class="u-marginRight">1 Selected</li>
+//     <li class="u-marginRight"><a href="#" class="u-linkComplex"><span class="Icon--plus"></span> <span class="u-linkComplex-target">Action</span></a></li>
+//     <li><a href="#" class="u-linkComplex"><span class="Icon--edit"></span> <span class="u-linkComplex-target">Action</span></a></li>
+//   </ul>
+// </div>
+// 
+// Styleguide 8.4

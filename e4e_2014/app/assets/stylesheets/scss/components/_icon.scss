@@ -1,0 +1,497 @@
+// Icons
+//
+// Pretty little icons via an icon font
+//
+// <table class="Table Table--border Table--striped">
+// <thead class="Table-Head">
+//   <tr>
+//     <th>Icon</th>
+//     <th>Class</th>
+//   </tr>
+// </thead>
+// <tbody>
+//   <tr><td><i class="Icon--pdf"></i></td><td>.Icon--pdf</td></tr>
+//   <tr><td><i class="Icon--doc"></i></td><td>.Icon--doc</td></tr>
+//   <tr><td><i class="Icon--list"></i></td><td>.Icon--list</td></tr>
+//   <tr><td><i class="Icon--group"></i></td><td>.Icon--group</td></tr>
+//   <tr><td><i class="Icon--avatar"></i></td><td>.Icon--avatar</td></tr>
+//   <tr><td><i class="Icon--company"></i></td><td>.Icon--company</td></tr>
+//   <tr><td><i class="Icon--calendar"></i></td><td>.Icon--calendar</td></tr>
+//   <tr><td><i class="Icon--card"></i></td><td>.Icon--card</td></tr>
+//   <tr><td><i class="Icon--pencil"></i></td><td>.Icon--pencil</td></tr>
+//   <tr><td><i class="Icon--close"></i></td><td>.Icon--close</td></tr>
+//   <tr><td><i class="Icon--add"></i></td><td>.Icon--add</td></tr>
+//   <tr><td><i class="Icon--pdf"></i></td><td>.Icon--pdf</td></tr>
+//   <tr><td><i class="Icon--doc"></i></td><td>.Icon--doc</td></tr>
+//   <tr><td><i class="Icon--list"></i></td><td>.Icon--list</td></tr>
+//   <tr><td><i class="Icon--group"></i></td><td>.Icon--group</td></tr>
+//   <tr><td><i class="Icon--avatar"></i></td><td>.Icon--avatar</td></tr>
+//   <tr><td><i class="Icon--company"></i></td><td>.Icon--company</td></tr>
+//   <tr><td><i class="Icon--calendar"></i></td><td>.Icon--calendar</td></tr>
+//   <tr><td><i class="Icon--card"></i></td><td>.Icon--card</td></tr>
+//   <tr><td><i class="Icon--pencil"></i></td><td>.Icon--pencil</td></tr>
+//   <tr><td><i class="Icon--close"></i></td><td>.Icon--close</td></tr>
+//   <tr><td><i class="Icon--add"></i></td><td>.Icon--add</td></tr>
+//   <tr><td><i class="Icon--remove"></i></td><td>.Icon--remove</td></tr>
+//   <tr><td><i class="Icon--trash"></i></td><td>.Icon--trash</td></tr>
+//   <tr><td><i class="Icon--export"></i></td><td>.Icon--export</td></tr>
+//   <tr><td><i class="Icon--tag"></i></td><td>.Icon--tag</td></tr>
+//   <tr><td><i class="Icon--print"></i></td><td>.Icon--print</td></tr>
+//   <tr><td><i class="Icon--caret"></i></td><td>.Icon--caret</td></tr>
+//   <tr><td><i class="Icon--ignore"></i></td><td>.Icon--ignore</td></tr>
+//   <tr><td><i class="Icon--previous"></i></td><td>.Icon--previous</td></tr>
+//   <tr><td><i class="Icon--next"></i></td><td>.Icon--next</td></tr>
+//   <tr><td><i class="Icon--first"></i></td><td>.Icon--first</td></tr>
+//   <tr><td><i class="Icon--last"></i></td><td>.Icon--last</td></tr>
+//   <tr><td><i class="Icon--x"></i></td><td>.Icon--x</td></tr>
+//   <tr><td><i class="Icon--edit"></i></td><td>.Icon--edit</td></tr>
+//   <tr><td><i class="Icon--mail"></i></td><td>.Icon--mail</td></tr>
+//   <tr><td><i class="Icon--window"></i></td><td>.Icon--window</td></tr>
+//   <tr><td><i class="Icon--error"></i></td><td>.Icon--error</td></tr>
+//   <tr><td><i class="Icon--warning"></i></td><td>.Icon--warning</td></tr>
+//   <tr><td><i class="Icon--half"></i></td><td>.Icon--half</td></tr>
+//   <tr><td><i class="Icon--success"></i></td><td>.Icon--success</td></tr>
+//   <tr><td><i class="Icon--facebook"></i></td><td>.Icon--facebook</td></tr>
+//   <tr><td><i class="Icon--twitter"></i></td><td>.Icon--twitter</td></tr>
+//   <tr><td><i class="Icon--linkedIn"></i></td><td>.Icon--linkedIn</td></tr>
+//   <tr><td><i class="Icon--pinterest"></i></td><td>.Icon--pinterest</td></tr>
+//   <tr><td><i class="Icon--magnifyGlass"></i></td><td>.Icon--magnifyGlass</td></tr>
+//   <tr><td><i class="Icon--check"></i></td><td>.Icon--check</td></tr>
+//   <tr><td><i class="Icon--minimize"></i></td><td>.Icon--minimize</td></tr>
+//   <tr><td><i class="Icon--maximize"></i></td><td>.Icon--maximize</td></tr>
+//   <tr><td><i class="Icon--qr"></i></td><td>.Icon--qr</td></tr>
+//   <tr><td><i class="Icon--redo"></i></td><td>.Icon--redo</td></tr>
+//   <tr><td><i class="Icon--undo"></i></td><td>.Icon--undo</td></tr>
+//   <tr><td><i class="Icon--socialCampaigns"></i></td><td>.Icon--socialCampaigns</td></tr>
+//   <tr><td><i class="Icon--savelocal"></i></td><td>.Icon--savelocal</td></tr>
+//   <tr><td><i class="Icon--eventspot"></i></td><td>.Icon--eventspot</td></tr>
+//   <tr><td><i class="Icon--downloadApp"></i></td><td>.Icon--downloadApp</td></tr>
+//   <tr><td><i class="Icon--website"></i></td><td>.Icon--website</td></tr>
+//   <tr><td><i class="Icon--wireframe"></i></td><td>.Icon--wireframe</td></tr>
+//   <tr><td><i class="Icon--disk"></i></td><td>.Icon--disk</td></tr>
+//   <tr><td><i class="Icon--eye"></i></td><td>.Icon--eye</td></tr>
+//   <tr><td><i class="Icon--plus"></i></td><td>.Icon--plus</td></tr>
+//   <tr><td><i class="Icon--minus"></i></td><td>.Icon--minus</td></tr>
+//   <tr><td><i class="Icon--link"></i></td><td>.Icon--link</td></tr>
+//   <tr><td><i class="Icon--fitImage"></i></td><td>.Icon--fitImage</td></tr>
+//   <tr><td><i class="Icon--fillImage"></i></td><td>.Icon--fillImage</td></tr>
+//   <tr><td><i class="Icon--leftJustify"></i></td><td>.Icon--leftJustify</td></tr>
+//   <tr><td><i class="Icon--rightJustify"></i></td><td>.Icon--rightJustify</td></tr>
+//   <tr><td><i class="Icon--centerJustify"></i></td><td>.Icon--centerJustify</td></tr>
+//   <tr><td><i class="Icon--fullJustify"></i></td><td>.Icon--fullJustify</td></tr>
+//   <tr><td><i class="Icon--bulletList"></i></td><td>.Icon--bulletList</td></tr>
+//   <tr><td><i class="Icon--numberList"></i></td><td>.Icon--numberList</td></tr>
+//   <tr><td><i class="Icon--sort"></i></td><td>.Icon--sort</td></tr>
+//   <tr><td><i class="Icon--fontSelect"></i></td><td>.Icon--fontSelect</td></tr>
+//   <tr><td><i class="Icon--fontWeightSelect"></i></td><td>.Icon--fontWeightSelect</td></tr>
+//   <tr><td><i class="Icon--fontItalic"></i></td><td>.Icon--fontItalic</td></tr>
+//   <tr><td><i class="Icon--fontUnderline"></i></td><td>.Icon--fontUnderline</td></tr>
+//   <tr><td><i class="Icon--increaseHeight"></i></td><td>.Icon--increaseHeight</td></tr>
+//   <tr><td><i class="Icon--increaseTopMargin"></i></td><td>.Icon--increaseTopMargin</td></tr>
+//   <tr><td><i class="Icon--increaseBottomMargin"></i></td><td>.Icon--increaseBottomMargin</td></tr>
+//   <tr><td><i class="Icon--location"></i></td><td>.Icon--location</td></tr>
+//   <tr><td><i class="Icon--increaseWidth"></i></td><td>.Icon--increaseWidth</td></tr>
+//   <tr><td><i class="Icon--phone"></i></td><td>.Icon--phone</td></tr>
+//   <tr><td><i class="Icon--imageFiles"></i></td><td>.Icon--imageFiles</td></tr>
+//   <tr><td><i class="Icon--clock"></i></td><td>.Icon--clock</td></tr>
+//   <tr><td><i class="Icon--instagram"></i></td><td>.Icon--instagram</td></tr>
+//   <tr><td><i class="Icon--stockPhoto"></i></td><td>.Icon--stockPhoto</td></tr>
+//   <tr><td><i class="Icon--sync"></i></td><td>.Icon--sync</td></tr>
+//   <tr><td><i class="Icon--imageHero"></i></td><td>.Icon--imageHero</td></tr>
+//   <tr><td><i class="Icon--gridView"></i></td><td>.Icon--gridView</td></tr>
+//   <tr><td><i class="Icon--folderClosed"></i></td><td>.Icon--folderClosed</td></tr>
+//   <tr><td><i class="Icon--folderOpen"></i></td><td>.Icon--folderOpen</td></tr>
+//   <tr><td><i class="Icon--bigClose"></i></td><td>.Icon--bigClose</td></tr>
+//   <tr><td><i class="Icon--copy"></i></td><td>.Icon--copy</td></tr>
+//   <tr><td><i class="Icon--drag"></i></td><td>.Icon--drag</td></tr>
+//   <tr><td><i class="Icon--video"></i></td><td>.Icon--video</td></tr>
+//   <tr><td><i class="Icon--computer"></i></td><td>.Icon--computer</td></tr>
+//   <tr><td><i class="Icon--caretRight"></i></td><td>.Icon--caretRight</td></tr>
+//   <tr><td><i class="Icon--caretLeft"></i></td><td>.Icon--caretLeft</td></tr>
+//   <tr><td><i class="Icon--faq"></i></td><td>.Icon--faq</td></tr>
+//   <tr><td><i class="Icon--epromos"></i></td><td>.Icon--epromos</td></tr>
+//   <tr><td><i class="Icon--rss"></i></td><td>.Icon--rss</td></tr>
+//   <tr><td><i class="Icon--changeTheme"></i></td><td>.Icon--changeTheme</td></tr>
+//   <tr><td><i class="Icon--removeFolder"></i></td><td>.Icon--removeFolder</td></tr>
+//   <tr><td><i class="Icon--questionMark"></i></td><td>.Icon--questionMark</td></tr>
+//   <tr><td><i class="Icon--info"></i></td><td>.Icon--info</td></tr>
+//   <tr><td><i class="Icon--create"></i></td><td>.Icon--create</td></tr>
+//   <tr><td><i class="Icon--chatBubble"></i></td><td>.Icon--chatBubble</td></tr>
+//   <tr><td><i class="Icon--roundedCaret"></i></td><td>.Icon--roundedCaret</td></tr>
+//   <tr><td><i class="Icon--star"></i></td><td>.Icon--star</td></tr>
+//   <tr><td><i class="Icon--newWindow"></i></td><td>.Icon--newWindow</td></tr>
+//   <tr><td><i class="Icon--addNew"></i></td><td>.Icon--addNew</td></tr>
+//   <tr><td><i class="Icon--video"></i></td><td>.Icon--video</td></tr>
+//   <tr><td><i class="Icon--phoneRound"></i></td><td>.Icon--phoneRound</td></tr>
+//   <tr><td><i class="Icon--shareOld"></i></td><td>.Icon--shareOld</td></tr>
+//   <tr><td><i class="Icon--shareNew"></i></td><td>.Icon--shareNew</td></tr>
+//   <tr><td><i class="Icon--statusScheduled"></i></td><td>.Icon--statusScheduled</td></tr>
+//   <tr><td><i class="Icon--statusActive"></i></td><td>.Icon--statusActive</td></tr>
+//   <tr><td><i class="Icon--statusSent"></i></td><td>.Icon--statusSent</td></tr>
+//   <tr><td><i class="Icon--responsive"></i></td><td>.Icon--responsive</td></tr>
+//   <tr><td><i class="Icon--gear"></i></td><td>.Icon--gear</td></tr>
+//   <tr><td><i class="Icon--badge"></i></td><td>.Icon--badge</td></tr>
+//   <tr><td><i class="Icon--dropTarget"></i></td><td>.Icon--dropTarget</td></tr>
+// </tbody>
+// </table>
+//
+// Markup: <i class="{$modifiers}"></i>
+//
+// Styleguide 7.0.0
+
+[class^="Icon--"],
+[class*=" Icon--"] {
+  font-family: 'ctct_icon_font';
+  //font-size:16px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+}
+[class^="Icon--"]:before,
+[class*=" Icon--"]:before{
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+// makes sure icons active on rollover in links
+a [class^="Icon--"],
+a [class*=" Icon--"] {
+  display: inline;
+}
+
+.Icon--pdf:before {
+  content:'\e000';
+}
+.Icon--doc:before {
+  content: "\e001";
+}
+.Icon--list:before {
+  content: "\e002";
+}
+.Icon--group:before {
+  content: "\e003";
+}
+.Icon--avatar:before {
+  content: "\e004";
+}
+.Icon--company:before {
+  content: "\e005";
+}
+.Icon--calendar:before {
+  content: "\e006";
+}
+.Icon--card:before {
+  content: "\e007";
+}
+.Icon--pencil:before {
+  content: "\e008";
+}
+.Icon--close:before {
+  content: "\e009";
+}
+.Icon--add:before {
+  content: "\e00a";
+}
+.Icon--remove:before {
+  content: "\e00b";
+}
+.Icon--trash:before {
+  content: "\e00c";
+}
+.Icon--export:before {
+  content: "\e00d";
+}
+.Icon--tag:before {
+  content: "\e00e";
+}
+.Icon--print:before {
+  content: "\e00f";
+}
+.Icon--caret:before {
+  content: "\e010";
+}
+.Icon--ignore:before {
+  content: "\e011";
+}
+.Icon--previous:before {
+  content: "\e012";
+}
+.Icon--next:before {
+  content: "\e013";
+}
+.Icon--first:before {
+  content: "\e014";
+}
+.Icon--last:before {
+  content: "\e015";
+}
+.Icon--x:before {
+  content: "\e016";
+}
+.Icon--edit:before {
+  content: "\e017";
+}
+.Icon--mail:before {
+  content: "\e018";
+}
+.Icon--window:before {
+  content: "\e019";
+}
+.Icon--error:before {
+  content: "\e01a";
+}
+.Icon--warning:before {
+  content: "\e01b";
+}
+.Icon--half:before {
+  content: "\e01c";
+}
+.Icon--success:before {
+  content: "\e01d";
+}
+.Icon--facebook:before {
+  content: "\e01e";
+}
+.Icon--twitter:before {
+  content: "\e01f";
+}
+.Icon--linkedIn:before {
+  content: "\e020";
+}
+.Icon--pinterest:before {
+  content: "\e021";
+}
+.Icon--magnifyGlass:before {
+  content: "\e022";
+}
+.Icon--check:before {
+  content: "\e023";
+}
+.Icon--minimize:before {
+  content: "\e024";
+}
+.Icon--maximize:before {
+  content: "\e025";
+}
+.Icon--qr:before {
+  content: "\e026";
+}
+.Icon--redo:before {
+  content: "\e027";
+}
+.Icon--undo:before {
+  content: "\e028";
+}
+.Icon--socialCampaigns:before {
+  content: "\e029";
+}
+.Icon--savelocal:before {
+  content: "\e02a";
+}
+.Icon--eventspot:before {
+  content: "\e02b";
+}
+.Icon--downloadApp:before {
+  content: "\e02c";
+}
+.Icon--website:before {
+  content: "\e02d";
+}
+.Icon--wireframe:before {
+  content: "\e02e";
+}
+.Icon--disk:before {
+  content: "\e02f";
+}
+.Icon--eye:before {
+  content: "\e030";
+}
+.Icon--plus:before {
+  content: "\e031";
+}
+.Icon--minus:before {
+  content: "\e032";
+}
+.Icon--link:before {
+  content: "\e033";
+}
+.Icon--fitImage:before {
+  content: "\e034";
+}
+.Icon--fillImage:before {
+  content: "\e035";
+}
+.Icon--leftJustify:before {
+  content: "\e036";
+}
+.Icon--rightJustify:before {
+  content: "\e037";
+}
+.Icon--centerJustify:before {
+  content: "\e038";
+}
+.Icon--fullJustify:before {
+  content: "\e039";
+}
+.Icon--bulletList:before {
+  content: "\e03a";
+}
+.Icon--numberList:before {
+  content: "\e03b";
+}
+.Icon--sort:before {
+  content: "\e03c";
+}
+.Icon--fontSelect:before {
+  content: "\e03d";
+}
+.Icon--fontWeightSelect:before {
+  content: "\e03e";
+}
+.Icon--fontItalic:before {
+  content: "\e03f";
+}
+.Icon--fontUnderline:before {
+  content: "\e040";
+}
+.Icon--increaseHeight:before {
+  content: "\e041";
+}
+.Icon--increaseTopMargin:before {
+  content: "\e042";
+}
+.Icon--increaseBottomMargin:before {
+  content: "\e043";
+}
+.Icon--location:before {
+  content: "\e044";
+}
+.Icon--increaseWidth:before {
+  content: "\e045";
+}
+.Icon--phone:before {
+  content: "\e046";
+}
+.Icon--imageFiles:before {
+  content: "\e047";
+}
+.Icon--clock:before {
+  content: "\e048";
+}
+.Icon--instagram:before {
+  content: "\e049";
+}
+.Icon--stockPhoto:before {
+  content: "\e04a";
+}
+.Icon--sync:before {
+  content: "\e04b";
+}
+.Icon--imageHero:before {
+  content: "\e04c";
+}
+.Icon--gridView:before {
+  content: "\e04d";
+}
+.Icon--folderClosed:before {
+  content: "\e04e";
+}
+.Icon--folderOpen:before {
+  content: "\e04f";
+}
+.Icon--bigClose:before {
+  content: "\e050";
+}
+.Icon--copy:before {
+  content: "\e051";
+}
+.Icon--drag:before {
+  content: "\e052";
+}
+.Icon--video:before {
+  content: "\e053";
+}
+.Icon--computer:before {
+  content: "\e054";
+}
+.Icon--caretRight:before {
+  content: "\e055";
+}
+.Icon--caretLeft:before {
+  content: "\e056";
+}
+.Icon--faq:before {
+  content: "\e057";
+}
+.Icon--epromos:before {
+  content: "\e058";
+}
+.Icon--rss:before {
+  content: "\e059";
+}
+.Icon--changeTheme:before {
+  content: "\e05a";
+}
+.Icon--removeFolder:before {
+  content: "\e05b";
+}
+.Icon--questionMark:before {
+  content: "\e05c";
+}
+.Icon--info:before {
+  content: "\e05d";
+}
+.Icon--create:before {
+  content: "\e05e";
+}
+.Icon--chatBubble:before {
+  content: "\e05f";
+}
+.Icon--roundedCaret:before {
+  content: "\e060";
+}
+.Icon--star:before {
+  content: "\e061";
+}
+.Icon--newWindow:before {
+  content: "\e062";
+}
+.Icon--addNew:before {
+  content: "\e063";
+}
+.Icon--video:before {
+  content: "\e064";
+}
+.Icon--phoneRound:before {
+  content: "\e065";
+}
+.Icon--shareOld:before {
+  content: "\e066";
+}
+.Icon--shareNew:before {
+  content: "\e067";
+}
+.Icon--statusScheduled:before {
+  content: "\e068";
+}
+.Icon--statusActive:before {
+  content: "\e069";
+}
+.Icon--statusSent:before {
+  content: "\e06a";
+}
+.Icon--responsive:before {
+  content: "\e06b";
+}
+.Icon--gear:before {
+  content:"\e06c";
+}
+.Icon--badge:before {
+  content:"\e06d";
+}
+.Icon--dropTarget:before {
+  content:"\e06e";
+}

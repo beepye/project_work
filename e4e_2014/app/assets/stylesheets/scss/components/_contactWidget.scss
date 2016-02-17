@@ -1,0 +1,60 @@
+// Contact Widget
+//
+// The Contact Widget is 
+//
+// Markup: <article class="ContactsWidget">
+//     <div class="Grid">
+//         <div class="Grid-item">
+//             <h1 class="ContactsWidget-heading"><a href="#">35 Contacts</a></h1>
+//         </div>
+//         <div class="Grid-item u-size1of2">
+//             <div class="ContactsWidget-cell u-borderRight u-borderDark">
+//                 <a href="#">Add</a>
+//                 <div class="Dropdown Dropdown--plain js-dropdown u-clearfix is-closed" data-hposition="right">
+// 		               <button type="button" class="Dropdown-toggle js-dropdownTrigger">
+// 			               <i class="Icon--roundedCaret"></i>
+// 		               </button>
+// 		               <ul class="Dropdown-menu u-textLeft u-weightNormal u-TextTransformNone">
+// 			               <li class="Dropdown-menu-item"><a href="#">Add a contact</a></li>
+// 			               <li class="Dropdown-menu-item"><a href="#">Add by email address</a></li>
+// 			               <li class="Dropdown-menu-item"><a href="#">Add from file</a></li>
+// 			               <li class="Dropdown-menu-item"><a href="#">Add from google</a></li>
+// 			               <li class="Dropdown-menu-item"><a href="#">Import form other apps</a></li>
+// 		                </ul>
+// 	                </div>
+//             </div>
+//         </div>
+//         <div class="Grid-item u-size1of2">
+//             <div class="ContactsWidget-cell">
+//                 <a href="#">Sign up tools</a>
+//             </div>
+//         </div>
+//     </div>
+// </article>
+// 
+// Styleguide 15.0.0
+
+.ContactsWidget {
+	margin-bottom: rem($base-spacing-unit);
+	border: rem(2) solid $brdrColorDark;
+	border-radius: rem(2);
+	text-align: center;
+
+	.Grid {
+		margin: 0;
+	}
+}
+	.ContactsWidget-heading {
+		display: block;
+		@include font-size($h2-size);
+		margin: 0;
+		padding: rem($base-spacing-unit);
+		background-color: #eef7fb;
+		border-bottom: rem(1) solid $brdrColorDark;
+	}
+	.ContactsWidget-cell {
+		padding: rem($half-spacing-unit);
+		@include font-size($micro-size);
+		text-transform: uppercase;
+		font-weight: 600;
+	}

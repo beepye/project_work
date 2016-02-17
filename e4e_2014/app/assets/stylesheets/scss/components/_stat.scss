@@ -1,0 +1,53 @@
+// Stat
+//
+// The Stat component displays a statistic with a caption.
+//
+// Markup: <p class="Stat {$modifiers}"><a href="#" class="Stat-data">25</a> opens</p>
+// 
+// .Stat--fixedWidth - Give the Stat a min-width of 112px.
+// .Stat--rwd - Left aligns text on resolutions below 769px and right aligns text on all other resolutions.
+// 
+// Styleguide 14.0.0
+
+.Stat {
+	margin-bottom: 0;
+	font-size: rem($micro-size);
+	text-transform: uppercase;
+	font-weight: 600;
+	text-align: right;
+	line-height: 0.5;
+}
+	.Stat--large {
+		line-height: 1.5;
+
+		.Stat-data {
+			@include font-size($giga-size);
+		}
+	}
+	.Stat-data {
+		display: block;
+		@include font-size($h2-size);
+		font-weight: bold;
+	}
+	.Stat--fixedWidth {
+
+		@include rwd-b3() {
+			min-width: rem(112);
+		}
+	}
+	.Stat--rwd {
+		text-align: left;
+		padding-left: 0;
+
+		@include rwd-b2() {
+			text-align: right;
+		}
+	}
+
+// Stat - Large
+//
+// The modifier <em>Stat--large</em> can be applied to create a hero size statistic.
+//
+// Markup: <p class="Stat Stat--large"><a href="#" class="Stat-data">25</a> opens</p>
+// 
+// Styleguide 14.1.0

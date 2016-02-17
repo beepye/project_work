@@ -1,0 +1,27 @@
+@font-face {
+	font-family: 'aat';
+	src:url('../../fonts/aat.eot');
+	src:url('../../fonts/aat.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/aat.woff') format('woff'),
+		url('../../fonts/aat.ttf') format('truetype'),
+		url('../../fonts/aat.svg#aat') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+//************************************************************************//
+// Use the following CSS code if you want to use data 
+// attributes for inserting your icons
+//************************************************************************//
+
+[data-icon]:before {
+	font-family: 'aat';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

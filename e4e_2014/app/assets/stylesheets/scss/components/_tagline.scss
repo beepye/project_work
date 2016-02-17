@@ -1,0 +1,24 @@
+// Tagline
+//
+// The tagline represents a line of text containing a status, type, and description. 
+//
+// Markup: <h2 class="Tagline">
+//   <span class="Tagline-status u-colorActive"><i class="Icon--statusActive"></i> Active</span> 
+//   <span class="Tagline-type">Card</span>, created on 4/2/13, 7:43PM
+// </h2>
+// 
+// Styleguide 13.0.0
+
+.Tagline {
+	@include font-size($centi-size);
+	margin-bottom: 0;
+	font-weight: normal;
+}
+	.Tagline-status {
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+	.Tagline-type {
+		font-weight: 600;
+		color: $color4;
+	}

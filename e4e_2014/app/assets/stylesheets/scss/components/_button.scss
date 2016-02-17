@@ -1,0 +1,264 @@
+// Buttons
+//
+// Things you click
+//
+// Markup:
+// <a href="#" class="Button {$modifiers}">a.Button</a>
+// <button class="Button {$modifiers}">button.Button</button>
+// <input class="Button {$modifiers}" type="submit" value="input[type='submit'].Button">
+//
+// :hover - mouseover the button
+// :active - click/tap the button
+// Button--primary - primary page action, only one per page
+// Button--primary:hover - mouseover primary buttons
+// Button--primary:active - click/tap primary buttons
+// Button--secondary - secondary actions, form submits, saves, commits, etc.
+// Button--secondary:hover - mouseover secondary buttons
+// Button--secondary:active - click/tap secondary buttons
+// Button--tertiary - Reserved for button groups and toggles
+// Button--tertiary:hover - mouseover tertiary buttons
+// Button--tertiary.is-active - click/tap tertiary buttons
+// :disabled - can't use the button
+// .is-disabled - can't use the button
+//
+// Styleguide 3.0.0
+
+//reset to fix Firfix bug:
+//http://davidwalsh.name/firefox-buttons
+//http://cbjdigital.com/blog/2010/08/bulletproof_css_input_button_heights
+input[type="submit"]::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    margin-top:-2px;
+    margin-bottom: -2px;
+}
+
+.Button {
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 1rem;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: rem(14) rem(20); //total height is 44px
+    line-height: 1;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    background-color: $btnColor;
+    color: $btnTxtColor;
+    border: none;
+    box-shadow: none;
+    border-radius: $btnRound;
+    @include vendor-prefix(user-select, none);
+    @include vendor-prefix(transition, $brand-transition);
+}
+.Button:hover {
+    background-color: $btnColorHover;
+    text-decoration: none;
+}
+.Button:active {
+    background-color: $btnColorActive;
+}
+.Button:focus {
+    outline: none;
+}
+
+.Button--primary {
+    color: #fff;
+    background-color: $btnColorPrimary;
+}
+.Button--primary:hover {
+    color: #fff;
+    background-color: $btnColorPrimaryHover;
+}
+.Button--primary:active {
+    background-color: $btnColorPrimaryActive;
+}
+
+.Button--secondary {
+    color: #fff;
+    background-color: $btnColorSecondary;
+}
+.Button--secondary:hover {
+    color: #fff;
+    background-color: $btnColorSecondaryHover;
+}
+.Button--secondary:active {
+    background-color: $btnColorSecondaryActive;
+}
+
+.Button--tertiary {
+    .Button-icon {
+        color: $btnIconAltColor;
+    }
+}
+.Button--tertiary:active,
+.Button--tertiary.is-active,
+.Button--tertiary:hover {
+    background-color: $btnGroupColorActive;
+
+     .Button-icon {
+        color: $btnIconAltColorActive;
+    }
+}
+
+.Button.is-disabled,
+.Button:disabled {
+    background-color: $btnColorDisabled;
+    color: $btnTxtColorDisabled;
+    cursor: default;
+}
+
+
+// Button Sizes
+//
+// Sizing modifiers that can be applied to any type of button
+//
+// Markup:
+// <a href="#" class="Button {$modifiers}">a.Button</a>
+// <button class="Button {$modifiers}">button.Button</button>
+// <input class="Button {$modifiers}" type="submit" value="input[type='submit'].Button">
+//
+// .Button--small - small button
+//
+// Styleguide 3.1.0
+
+.Button--large {
+    padding: rem(22) rem(30); //total height 60px
+    line-height: rem(16);
+}
+
+.Button--small {
+    padding: rem(7.5) rem(15); //height 30px
+    line-height: 1;
+    font-size: rem($centi-size);
+    border-radius:1px;
+}
+
+
+// Block Buttons
+//
+// Makes buttons display the full width of their container. Can be paired with any type or size
+//
+// Markup:
+// <a href="#" class="Button Button--block">a.Button</a><br>
+// <button class="Button Button--block">button.Button</button><br>
+// <input class="Button Button--block" type="submit" value="input[type='submit'].Button">
+//
+// Styleguide 3.2.0
+
+.Button--block {
+    display:block;
+    width:100%;
+}
+
+
+// Call-To-Action Button
+//
+// The big, beautiful, bold button that's 100% width
+//
+// Markup:
+// <a href="#" class="Button Button--cta {$modifiers}">a.Button</a><br><br>
+// <button class="Button Button--cta {$modifiers}">button.Button</button><br><br>
+// <input class="Button Button--cta {$modifiers}" type="submit" value="input[type='submit'].Button">
+//
+// :hover - mouseover
+// :active - click/tap
+// .is-active - click/tap
+//
+// Styleguide 3.3.0
+
+.Button--cta {
+    line-height: 1;
+    padding: rem(18.5) 0; //60px height
+    color: #fff;
+    background-color: $btnColorPrimary;
+    border: 2px solid darken($btnColorPrimary, 5%);
+    border-radius: rem($brand-round);
+    font-weight:600;
+    width:100%;
+    font-size: rem($h3-size);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+.Button--cta:hover {
+    background-color: $btnColorPrimaryHover;
+    border-color: darken($btnColorPrimaryHover, 5%);
+    color: #fff;
+}
+.Button--cta:active {
+    background-color: $btnColorPrimaryActive;
+    border-color: darken($btnColorPrimaryActive, 5%);
+}
+
+
+// Icon Buttons with Text
+//
+// Buttons with icons and text. Only tertiary buttons should contain icons.
+//
+// Markup:
+// <button class="Button Button--tertiary"><i class="Button-icon Icon--copy {$modifiers}"></i> Do Something</button>
+// <button class="Button Button--tertiary Button--small"><i class="Button-icon Icon--gridView {$modifiers}"></i> Do Something</button>
+//
+// Styleguide 3.4.0
+
+.Button-icon {
+    font-size: rem(20);
+    vertical-align: rem(-4);
+    @include vendor-prefix(transition, $brand-transition);
+
+    .Button--small & {
+        font-size: rem($base-font-size);
+        vertical-align: rem(-2);
+    }
+}
+
+
+
+// Icon-only Buttons
+//
+// Buttons with only icons inside. There are two types, <em>.Button--icon</em> and <em>.Button--iconSmall</em>.
+//
+// As with other icon buttons this should only appear with <code>.Button--tertiary</code> with the exception of the create flow buttons which can use <code>.Button--primary</code>.
+// <p>
+// <a href="#" class="Button Button--primary Button--icon"><i class="Button-icon Icon--plus"></i></a>
+// <button class="Button Button--primary Button--icon"><i class="Button-icon Icon--plus"></i></button>
+// <a href="#" class="Button Button--primary Button--iconSmall"><i class="Button-icon Icon--plus"></i></a>
+// <button class="Button Button--primary Button--iconSmall"><i class="Button-icon Icon--plus"></i></button>
+// </p>
+//
+// Markup:
+// <a href="#" class="Button Button--icon"><i class="Button-icon Icon--plus"></i></a>
+// <button class="Button Button--icon"><i class="Button-icon Icon--plus"></i></button>
+// <a href="#" class="Button Button--iconSmall"><i class="Button-icon Icon--plus"></i></a>
+// <button class="Button Button--iconSmall"><i class="Button-icon Icon--plus"></i></button>
+//
+// Styleguide 3.4.1
+
+.Button--icon {
+    height: rem(40);
+    width: rem(40);
+    padding: 0;
+    line-height: rem(40);
+    font-weight: 400;
+    > .Button-icon,
+    > .Button-icon:before {
+        display: inline-block;
+        vertical-align: 0;
+        font-size: rem(35);
+        height: rem(40);
+        width: rem(40);
+    }
+}
+.Button--iconSmall {
+    height: rem(16);
+    width: rem(16);
+    padding: 0;
+    position: relative;
+    line-height: 1 !important;  // Need to override .List component styles
+    > .Button-icon,
+    > .Button-icon:before {
+        display: inline-block;
+        vertical-align: baseline;
+        line-height: rem(16);
+        font-size: rem(13);
+    }
+}

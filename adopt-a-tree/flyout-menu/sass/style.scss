@@ -1,0 +1,16 @@
+@import '../../global-stylesheet/global';
+
+//************************************************************************//
+// The following CSS is STRICTLY for the page structure and IS NOT 
+// specific to the flyout menu!! CSS for the flyout menu itself is found
+// in a partial in the global directory
+//************************************************************************//
+
+body {
+	background-image: url('../../images/map.png');
+}
+
+a {
+	color: $green;
+}
+

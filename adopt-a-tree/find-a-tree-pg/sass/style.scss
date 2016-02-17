@@ -1,0 +1,51 @@
+@import '../../global-stylesheet/global';
+
+body {
+	background-image: url('../../images/map.png');
+}
+
+a {
+	color: $green;
+}
+
+//************************************************************************//
+// These are positioning styles strictly for a visual reference
+// Tree locations will be filled dynamically
+//************************************************************************//
+
+#app-container { 
+
+	.adoption-trees {
+		position: absolute;
+		font-size: 1.5em;
+
+		&.tree-example-location-1 {
+			top: 34px;
+			left: 120px;
+		}
+
+		&.tree-example-location-2 {
+			top: 237px;
+			left: 208px;
+		}
+
+		&.tree-example-location-3 {
+			top: 152px;
+			left: 44px;
+		}
+
+		&.tree-example-location-4 {
+			top: 14px;
+			left: 239px;
+		}
+
+		&.tree-example-location-5 {
+			top: 128px;
+			left: 88px;
+		}
+	}
+
+	.already-adopted {
+		color: $brown;
+	}
+}

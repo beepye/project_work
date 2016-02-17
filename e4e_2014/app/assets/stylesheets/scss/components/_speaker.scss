@@ -1,0 +1,74 @@
+.Speaker {
+	text-align: center;
+	padding: 0 rem($base-spacing-unit);
+	margin: 0 0 rem($double-spacing-unit) 0;
+	border-bottom: rem(1) solid $brdrColor;
+
+	a {
+		text-decoration: none;
+	}
+}
+	.Speaker-image {
+		width: 100%;
+		max-width: rem(300);
+		margin: 0 auto;
+		border: rem(3) solid $grey;
+		border-radius: 50%;
+
+		&:hover {
+			border: rem(3) solid $green;
+		}
+	}
+	.Speaker-name {
+		display: block;
+		@include font-size($kilo-size);
+		color: $green;
+	}
+	.Speaker-position {
+		@include font-size($centi-size);
+		color: $grey;
+	}
+	.Speaker-company {
+		color: $green;
+		@include font-size($centi-size);
+	}
+
+.Speaker--biography {
+	padding: 0;
+	text-align: left;
+
+	.Speaker-image {
+		max-width: rem(200);
+	}
+	.Speaker-name {
+		@include font-size($h3-size);
+		color: $greenGray;
+	}
+	.Speaker-position {
+		@include font-size($milli-size);
+	}
+	.Speaker-company {
+		@include font-size($milli-size);
+	}
+}
+.Speaker-credentials {
+	width: 100%;
+	margin: 0 auto;
+	float: left;
+	text-align: center;
+	padding-right: rem(25);
+}
+.Speaker-icons {
+	color: $green;
+	margin: 0 0 rem($base-spacing-unit) 0;
+	@include font-size($micro-size);
+}
+.Speaker-bio,
+.Speaker-sessionDescription {
+	float: right;
+	@include font-size($centi-size);
+
+	p {
+		margin: 0 0 rem($base-spacing-unit) 0;
+	}
+}

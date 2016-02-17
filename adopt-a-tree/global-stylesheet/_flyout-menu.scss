@@ -1,0 +1,98 @@
+
+#flyout-menu-btn {
+	background: #403529;
+	width: 50px;
+	height: 30px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	@include border-radius($radius);
+
+	> span {
+		display: block;
+		background-color: #fff;
+		height: 3px;
+		width: 40%;
+		@include border-radius(2px);
+		margin: 3px auto;
+
+		&:first-child {
+			margin-top: 7px;
+		}
+	}
+}
+
+#flyout-menu {
+	background: $litetan;
+	width: 90%;
+	z-index: 100;
+	position: absolute;
+
+	> p {
+		display: inline-block;
+		color: $grey;
+		margin-left: 10px;
+	}
+
+	> span {
+		display: inline-block;
+		float: right;
+		margin: 13px 10px;
+		font-size: 1.5em;
+		color: $grey;
+	}
+
+	form {
+		background: $inputColor;
+		width: 100%;
+		position: relative;
+
+		fieldset {
+			width: 100%;
+
+			span {
+				position: absolute;
+				color: $inputColor;
+				top: 29px;
+				left: 24px;
+			}
+
+			input {
+				box-sizing: border-box;
+				width: 90%;
+				margin: 0 auto;
+				@include border-radius(25px);
+				padding: 12px 0 12px 30px;
+				color: $inputColor;
+			}
+		}
+	}
+
+	#action-list {
+		margin: 0;
+		width: 100%;
+
+		span {
+			color: $grey;
+			padding-right: 20px;
+			font-size: 2em;
+
+			&:nth-of-type(2) {
+				color: $brown;
+				font-size: 1.5em;
+			}
+		}
+		
+		li:active {
+			background: $green;
+
+			span {
+				color: $yellow;
+
+				&:nth-of-type(2) {
+					color: $litetan;
+				}
+			}
+		}
+	}
+}

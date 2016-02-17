@@ -1,0 +1,251 @@
+/*------------------------------------*\
+    $WRAPPER
+\*------------------------------------*/
+/**
+ * The wrapper will wrap all class inside a class of .fed-wrapper so that only elements with that class (or a parent having that class) will inherit styles
+ */
+$fed-wrapper:        true!default;
+
+
+
+
+
+/*------------------------------------*\
+    $BORDER-BOX
+\*------------------------------------*/
+/**
+ * Do you want all elements to adopt `box-sizing:border-box;` as per
+ * paulirish.com/2012/box-sizing-border-box-ftw ?
+ */
+$global-border-box: true!default;
+
+
+
+
+
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * Base stuff
+ */
+$base-font-size:    16!default;
+$base-line-height:  24!default;
+
+/**
+ * Base font-family.
+ */
+$base-font-family:  'Whitney SSm A', 'Whitney SSm B', Helvetica Neue, Arial, sans-serif!default;
+
+/**
+ * Default colour for objects’ borders etc.
+ */
+$base-ui-color:     #ccc!default;
+
+
+
+
+
+/*------------------------------------*\
+    $RESPONSIVE
+\*------------------------------------*/
+
+/**
+ * Tell inuit.css when breakpoints start.
+ */
+$breakpoint1:   481px!default;
+$breakpoint2:   769px!default;
+$breakpoint3:   1000px!default;
+$breakpoint4:   1280px!default;
+
+
+/*------------------------------------*\
+    $FONT-SIZES
+\*------------------------------------*/
+/**
+ * Font-sizes (in pixels). Refer to relevant sections for their implementations.
+ */
+$giga-size:         48!default;
+$mega-size:         32!default;
+$kilo-size:         28!default;
+
+$h1-size:           24!default; // .alpha
+$h2-size:           21.3!default; // .beta
+$h3-size:           18.7!default; // .gamma
+$h4-size:           16!default; // .delta
+$h5-size:           14.7!default; // .epsilon
+$h6-size:           13.3!default; // .zeta
+
+$centi-size:        14.7!default;
+$milli-size:        13.3!default;
+$micro-size:        12!default;
+
+
+
+
+// /*------------------------------------*\
+//     $FONT-COLORS
+// \*------------------------------------*/
+// /**
+//  * Font-colors (in hex). Refer to relevant sections for their implementations.
+//  */
+$color1:  #88919a!default; // Metrics, Dash/Hub/Preview Section headings
+$color2:  #1a5285!default; // Modal headline, page title, selected sidebar filter labels
+$color3:  #0078c1!default; // Link color
+$color4:  #606d78!default; // Section headings for creation flows, intro paragraphs for creation flows, single line error messages, sub-body text, descriptor text, info text, sidebar filter labels, active tab labels, data grid column headers
+$color5:  #394856!default; // body, base, field labels, dropdown choices, radio & check box labels, user inputted text in fields
+$color6:  #b0b6bb!default; // field level helper text, Campaign status - deleted
+$color7:  #f5463b!default; // Error color / Campaign status - draft
+$color8:  #92d14f!default; // Campaign status - active
+$color9:  #6cc9D0!default; // Campaign status - sent
+$color10: #fea802!default; // Campaign status - scheduled
+$color11: #005c94!default; // Link hover color
+
+
+// BACKGROUND COLORS
+$bgcolorPrimary1:      #f8f8f8!default;
+$bgcolorPrimary2:      #ebedee!default;
+$bgcolorPrimary3:      #d7dadd!default;
+$bgcolorPrimary4:      #b0b6bb!default;
+$bgcolorPrimary5:      #88919a!default;
+$bgcolorPrimary6:      #606d78!default;
+$bgcolorPrimary7:      #394856!default;
+$bgcolorSecondary1:    #eff7fb!default;
+$bgcolorSecondary2:    #deeef6!default;
+$bgcolorSecondary3:    #9dcee6!default;
+$bgcolorSecondary4:    #5dacd6!default;
+$bgcolorNotification1: #fee4e2!default;
+$bgcolorNotification2: #f5463b!default;
+$bgcolorNotification3: #eaface!default;
+$bgcolorNotification4: #92d14f!default;
+$bgcolorNotification5: #fff3d8!default;
+$bgcolorNotification6: #ffc45c!default;
+$bgcolorAccent1:       #0078c1!default;
+$bgcolorAccent2:       #406e98!default;
+$bgcolorAccent3:       #ff7c59!default;
+$bgcolorAccent4:       #6cc9d0!default;
+$bgcolorAccent5:       #fea802!default;
+
+
+/*------------------------------------*\
+    $BUTTON COLLORS AND ATTRIBUTES
+\*------------------------------------*/
+/**
+ * Button-colors (in hex). Refer to relevant sections for their implementations.
+ */
+$btnColor:                  #ebedee!default;
+$btnColorHover:             #d7dadd!default;
+$btnColorActive:            $color6!default;
+$btnTxtColor:               $color3!default;
+$btnTxtColorActive:         $color2!default;
+
+$btnColorDisabled:          #ebedee!default;
+$btnTxtColorDisabled:       $color6!default;
+
+$btnColorPrimary:           #fea802!default;
+$btnColorPrimaryHover:      #fdb54e!default;
+$btnColorPrimaryActive:     #dc7f10!default;
+
+$btnColorSecondary:         $color3!default;
+$btnColorSecondaryHover:    #3e9fda!default;
+$btnColorSecondaryActive:   #005c94!default;
+
+$btnGroupColor:             #e4e7e9!default;
+$btnGroupTxtColor:          $color3!default;
+$btnGroupColorActive:       #deeef6!default;
+$btnGroupTxtColorActive:    $color2!default;
+$btnGroupSpacing:           2px!default;
+
+$btnRound:                  2px!default;
+
+$btnIconAltColor:           $color1!default;
+$btnIconAltColorActive:     #406e98!default;
+
+
+/*------------------------------------*\
+    $BORDER COLLORS
+\*------------------------------------*/
+/**
+ * Button-colors (in hex). Refer to relevant sections for their implementations.
+ */
+$brdrColor: #d7dadd!default;
+$brdrColorDark: #b0b6bb!default;
+
+
+
+
+
+
+
+
+// /*------------------------------------*\
+//     $QUOTES
+// \*------------------------------------*/
+// /**
+//  * English quote marks?
+//  */
+$english-quotes:    true!default;
+
+// /**
+//  * If you want English quotes then please do not edit these; they’re only here
+//  * because Sass needs them.
+//  */
+$open-quote:    null;
+$close-quote:   null;
+
+@if $english-quotes == true {
+    $open-quote:    \201C;
+    $close-quote:   \201D;
+}
+
+// /**
+//  * If you need non-English quotes, please alter the following values accordingly:
+//  */
+@if $english-quotes != true {
+    $open-quote:    \00AB;
+    $close-quote:   \00BB;
+}
+
+
+
+
+
+// /*------------------------------------*\
+//     $BRAND
+// \*------------------------------------*/
+// /**
+//  * Brand stuff
+//  */
+// $brand-color:       $color3!default;
+// $brand-face:        'Whitney SSm A', 'Whitney SSm B', Helvetica Neue, Arial, sans-serif!default;
+
+// /**
+//  * How big would you like round corners to be by default?
+//  */
+ $brand-round:        4!default;
+
+
+// /**
+//  * Where are the font files?
+//  * TODO: UPDATE THIS PATH WHEN OUR FONT ICONS ARE ON CDN
+//  */
+ $font-path: 'https://imgssl.constantcontact.com/ui/images1/bootstrap'!default;
+
+
+ /**
+ * The default transition (buttons, links, etc.)
+ */
+$brand-transition:        all 0.1s ease-in-out!default;
+
+
+/*------------------------------------*\
+    $FRAMEWORK
+\*------------------------------------*/
+/**
+ * Assign our `$base-line-height` to a new spacing var for more transparency.
+ */
+$base-spacing-unit: $base-line-height!default;
+$half-spacing-unit: $base-spacing-unit / 2!default;
+$one-and-half-spacing-unit: $base-line-height * 1.5!default;
+$double-spacing-unit: $base-spacing-unit * 2!default;
+$line-height-ratio: $base-line-height / $base-font-size;
