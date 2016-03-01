@@ -1,0 +1,85 @@
+@import '../../styles/base';
+
+$alertOrange:       #fa9203;
+$notificationIcon:  #79a8bf;
+
+.Button--ResourceCenter {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  vertical-align: baseline;
+}
+
+.NotificationBell {
+  position: relative;
+
+  > img {
+    position: absolute;
+    top: rem(-13);
+    right: rem(-15);
+  }
+}
+
+.ResourceCenter-outerwrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 100;
+  opacity: 0;
+  transition: all 300ms ease;
+  transform: translate3d(0, -100%, 0);
+
+  &.is-open {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.ResourceCenter-innerwrapper {
+  max-width: rem(900);
+  margin: 0 auto;
+  padding: rem($double-spacing-unit);
+}
+
+.ResourceCenter-Icon--close {
+  position: absolute;
+  top: rem(54);
+  right: rem(12);
+}
+
+.ResourceCenter-nav {
+  margin: rem($base-spacing-unit) 0 rem($one-and-half-spacing-unit);
+}
+
+.ResourceCenter-linksContainer {
+  display: flex;
+}
+
+.ResourceCenter-QuickLinks {
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  object {
+    max-width: rem(60);
+  }
+}
+
+.List--support > .Grid {
+  margin-bottom: rem($half-spacing-unit);
+}
+
+.ResourceCenter-supportTitle {
+  font-weight: 500;
+}
+
+.List.List--connect:hover .List-item {
+  background-color: transparent;
+}

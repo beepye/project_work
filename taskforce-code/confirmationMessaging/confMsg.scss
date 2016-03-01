@@ -1,0 +1,71 @@
+@import '../../styles/base';
+
+.Msg--confirmation {
+  position: fixed;
+  bottom: 55px;
+  bottom: rem(55);
+  left: 105px;
+  left: rem(105);
+  font-size: $milli-size + px;
+  font-size: rem($milli-size);
+  border-color: $bgcolorSecondary3;
+  background-color: $bgcolorSecondary1;
+  color: $color5;;
+  display: none;
+  margin: 0;
+  padding: 12px;
+  padding: rem(12);
+  line-height: 1.75;
+  box-shadow: 2px 2px 3px rgba(57,72,86,.25);
+  box-shadow: rem(2) rem(2) rem(3) rgba(57,72,86,.25);
+
+  &:before {
+    content: "";
+    color: #ffc45c;
+  }
+
+  .Msg-close--confirmation {
+    position: relative;
+    color: $bgcolorAccent1;
+    top: 3px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .Msg--confirmation-text {
+    display: inline-block;
+    margin: 0 12px 0 0;
+  }
+}
+
+.Msg--confirmation-undo {
+  color: $bgcolorAccent1;
+  margin: 0 12px 0 0;
+  display: inline-block;
+}
+
+.msgConf-animation {
+  display: block!important;
+  bottom: -90px!important;
+  animation-name: ConfirmationMessage;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes ConfirmationMessage {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .35;
+  }
+  100% {
+    transform: translate(0px, -150px);
+    opacity: 1;
+  }
+}

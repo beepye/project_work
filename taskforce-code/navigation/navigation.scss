@@ -1,0 +1,224 @@
+@import '../../styles/base';
+
+$navBgColor :       rgba(56, 72, 87, 1);
+$navLinkColor:      rgba(174, 181, 186, 1);
+$navLinkHover:      rgba(88, 170, 217, 1);
+$alertOrange:       #fa9203;
+$notificationIcon:  #79a8bf;
+
+body { background: #ebedee; }
+
+
+font-size: 16px;
+
+// Override strictly for this proto display!! Remove if used in Production!
+.main { padding: rem($double-spacing-unit) rem($base-spacing-unit); }
+
+/*************************
+ Base styles
+************************/
+
+.TF-Nav {
+  background-color: $navBgColor;
+  min-width: rem(300);
+  margin: 0;
+
+  .hideItem { display: none; }
+}
+
+.TF-Nav--List {
+  width: auto;
+
+  li {
+
+    a {
+      color: $navLinkColor;
+      cursor: default;
+    }
+
+    &:before { content: ''; }
+
+    &.TF-Nav-Button { background: $navBgColor; }
+
+    &:hover { background-color: $navLinkHover;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+
+    &.OffCanvas-wrapper:hover {
+      background-color: transparent;
+    }
+    
+    .TF-Nav--offCanvas-trigger {
+      cursor: default;
+    }
+  }
+
+  &.Icons-list li {
+
+    a {
+      position: relative;
+      padding: 0 rem($half-spacing-unit);
+    }
+
+    img {
+      top: rem(-12);
+      right: rem(0);
+    }
+
+    &:hover {
+      background: $navBgColor;
+      background-color: transparent;
+    }
+
+    &:last-of-type {  padding-right: rem($base-spacing-unit); }
+  }
+
+  &.CTCT-logo {
+    background-color: $navLinkHover;
+
+    li {
+      padding-right: rem($double-spacing-unit);
+      padding-left: rem($double-spacing-unit);
+    }
+
+    a { color: $navLinkHover; }
+
+    img {
+      position: absolute;
+      top: rem(22);
+      left: rem(48);
+    }
+
+    img[data-hover=true] { display: none; }
+
+    img[data-hover=false] { display: block; }
+
+    &:hover a { color: $navLinkHover;
+
+      img[data-hover=true] { display: none; }
+
+      img[data-hover=false] { display: block; }
+    }
+  }
+}
+
+.TF-Nav--List,
+.Dropdown-toggle {
+  margin: 0;
+  display: inline-block;
+  font-size: rem(13.3);
+  font-weight: 600;
+  line-height: 1.25;
+
+  li {
+    padding: rem($base-spacing-unit) rem($half-spacing-unit);
+    display: inline-block;
+  }
+}
+
+.TF-Nav--dropdown > .Dropdown-toggle {
+  color: $navLinkColor;
+  padding: rem($base-spacing-unit) 0 0 rem($half-spacing-unit);
+  display: inline-block;
+
+  &:hover { color: $navLinkColor; }
+
+  .is-open { color: $navLinkColor; }
+}
+
+.TF-Nav-Button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  vertical-align: baseline;
+  box-shadow: none;
+  padding: 0;
+  height: 0;
+  font-size: rem(13.3);
+  font-weight: 600;
+  color: #fff;
+
+  &:hover {
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+  > img {
+    position: absolute;
+    top: rem(26);
+    right: rem(72);
+  }
+}
+
+#TF-Nav--offCanvas {
+  &.OffCanvas-wrapper {
+    width: auto;
+    overflow: visible;
+  }
+
+  li:hover {
+    background: transparent;
+  }
+  
+  .TF-Nav--offCanvas-list {
+    background: #fff;
+
+    li {
+      display: block;
+    }
+  }
+}
+
+.TF-Nav--desktop { display: none; }
+
+ /* Notif Ctr icon styles */
+
+.Button--NotificationCenter[data-notifications=true] {
+
+  &:before {
+    content: " ";
+    background-color: $alertOrange;
+    height: rem(10);
+    width: rem(10);
+    border-radius: 50%;
+    position: absolute;
+    top: rem(-11);
+    left: rem(22);
+    z-index: 100;
+    //animation: pulse 2.35s ease-in-out;
+  }
+
+  &:after {
+    content: " ";
+    background: $navBgColor;
+    position: absolute;
+    height: rem(14);
+    width: rem(14);
+    border-radius: 50%;
+    top: rem(-13);
+    left: rem(20);
+    font-size: rem(11);
+    font-weight: 700;
+    //animation: pulse 2.35s ease-in-out;
+
+  }
+}
+
+/*************************
+ Mobile specific styles
+************************/
+
+.TF-Nav--mobile .TF-Nav-Button:hover { background: $navBgColor; }
+
+/*************************
+ Tablet specific styles
+************************/
+
+@media (min-width: rem(610)) {
+  .TF-Nav--mobile {  display: none; } .TF-Nav--desktop { display: block; }
+}
